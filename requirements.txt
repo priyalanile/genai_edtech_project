@@ -1,15 +1,21 @@
- langchain
- python-dotenv
- streamlit
- tiktoken
- faiss-cpu
- protobuf
-
+langchain==0.0.284
+langchain_community
+python-dotenv==1.0.0
+streamlit==1.22.0
+tiktoken==0.4.0
+faiss-cpu==1.7.4
+protobuf~=3.19.0
+ipykernel
+#google-cloud-aiplatform
+google.generativeai
 # langchain==0.0.284 => Framework!
 #  python-dotenv==1.0.0 => i) loads variables from .env ino system env. It ensures that sensitive data like API keys and credentials for services 
 #  (such as OpenAI, Google Cloud, or any other AI service) are stored safely and not hardcoded in the project files.
+
 #  streamlit=1.22.0 => UI
 #  tiktoken==0.4.0 =>  tokenizer library, converts text into tokenized data
 #  faiss-cpu==1.7.4 => Facebook AI Similarity Search Vector DB (Local)
 #  protobuf~3.19.0 => Protocol Buffers (protobuf) is a language-neutral and platform-neutral serialization format developed by Google. 
 #  It is used for efficiently encoding data in a binary format, which can then be transmitted or stored
+#google.generativeai => Trying to use this as Google Gemini API (Since PALM is deprecated from 15Aug2024
+# ipykernel => To allow Python cell running in Jupyter Notebook (.ipynb)
