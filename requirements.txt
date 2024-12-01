@@ -1,5 +1,9 @@
 langchain==0.0.284
 langchain_community
+InstructorEmbedding
+torch
+sentence-transformers==2.2.0
+
 python-dotenv==1.0.0
 streamlit==1.22.0
 tiktoken==0.4.0
@@ -7,7 +11,11 @@ faiss-cpu==1.7.4
 protobuf~=3.19.0
 ipykernel
 #google-cloud-aiplatform
-google.generativeai
+google.generativeai #Google's native gen ai for LLM
+scikit-learn
+langchain-google-genai #Using Google's Gen AI through LangChain in order to use langchain framework for interactions with other components like vector DB, langchain huggingface embeddings.
+
+
 # langchain==0.0.284 => Framework!
 #  python-dotenv==1.0.0 => i) loads variables from .env ino system env. It ensures that sensitive data like API keys and credentials for services 
 #  (such as OpenAI, Google Cloud, or any other AI service) are stored safely and not hardcoded in the project files.
