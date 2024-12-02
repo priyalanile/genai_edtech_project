@@ -17,7 +17,7 @@ import os
 load_dotenv() # Load the .env file
 
 
-llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=os.getenv("GOOGLE_GEMINI_API_KEY"), temperature=0.0) #Temp 0 as we don't want model to be creative but provide answer based on Q&A csv only.
+llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=os.getenv("GOOGLE_GEMINI_API_KEY"), temperature=0.1) #Temp 0.1 as we don't want model to be creative but provide answer based on Q&A csv only.
 
 
 
@@ -43,10 +43,9 @@ def get_qa_chain():
     #vectordb=FAISS.load_local(vectordb_file_path,sentence_embeddings) as it was giving deserialization warnings!
     vectordb = FAISS.from_documents(documents=data, embedding=sentence_embeddings)
 
-    retriever = vectordb.as_retriever()
-    prompt_template = """Given the following context and a question, generate an answer based on this context only. In the answer try to provide as much text as possible from "response" section in the source document without making things up.
-    if the answer is not found in the context, kindly state "I am unable to provide this information. Kindly get in touch with abc_helpdesk@gmail.com."
-    Don't try to make up an answer.
+    retriever = vectordb.as_retriever(score_threshold=0.7)
+    prompt_template = """Given the following context and a question, generate the answer. In the answer try to provide as much text as possible from "response" section in the source document for all possible valid responses combinations. 
+    Please just don't make things up. If the answer is not found in the context, kindly state "I am unable to provide this information. Kindly get in touch with abc_helpdesk@gmail.com."
     CONTEXT: {context}
     QUESTION: {question}
     """
