@@ -11,38 +11,19 @@ sentence-transformers==3.3.1
 streamlit
 tiktoken==0.4.0
 
-
-# langchain==0.0.284 => Framework!
-#  python-dotenv==1.0.0 => i) loads variables from .env ino system env. It ensures that sensitive data like API keys and credentials for services 
-#  (such as OpenAI, Google Cloud, or any other AI service) are stored safely and not hardcoded in the project files.
-
-#  streamlit=1.22.0 => UI
-#  tiktoken==0.4.0 =>  tokenizer library, converts text into tokenized data
-#  faiss-cpu==1.7.4 => Facebook AI Similarity Search Vector DB (Local)
-#  protobuf~3.19.0 => Protocol Buffers (protobuf) is a language-neutral and platform-neutral serialization format developed by Google. 
-#  It is used for efficiently encoding data in a binary format, which can then be transmitted or stored
-#google.generativeai => Trying to use this as Google Gemini API (Since PALM is deprecated from 15Aug2024
-# ipykernel => To allow Python cell running in Jupyter Notebook (.ipynb)
-
-#All packages in IPYNB that worked fine for Python Notebook!
-# faiss-cpu                     1.7.4
-# google-cloud-aiplatform       1.73.0
-# google-generativeai           0.8.3
-# google-cloud-aiplatform       1.73.0
-# google-generativeai           0.8.3
-# InstructorEmbedding           1.0.1
-# ipykernel                     6.29.5
-# langchain-community           0.3.8
-# langchain                     0.3.9
-# langchain-core                0.3.21
-# langchain-google-genai        2.0.6
-# langchain-huggingface         0.1.2
-# langchain-text-splitters      0.3.2
-# protobuf                      5.29.0
-# python-dotenv                 1.0.0
-# scikit-learn                  1.5.2
-# sentence-transformers         3.3.1
-# streamlit                     1.22.0
-# tiktoken                      0.4.0
-# torch                         2.5.1
-# torchvision                   0.20.1
+#List of all packages and their versions that worked!: 
+# faiss-cpu                    1.7.4
+# google-generativeai          0.8.3
+# langchain                    0.3.9
+# langchain-community          0.3.8
+# langchain-core               0.3.21
+# langchain-google-genai       2.0.6
+# langchain-huggingface        0.1.2
+# langchain-text-splitters     0.3.2
+# protobuf                     5.29.0
+# python-dotenv                1.0.0
+# scikit-learn                 1.5.2
+# sentence-transformers        3.3.1
+# streamlit                    1.40.2
+# tiktoken                     0.4.0
+# torch                        2.5.1
